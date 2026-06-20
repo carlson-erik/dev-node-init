@@ -7,6 +7,16 @@ if [ -z "$1" ]; then
   exit 1
 fi
 
+echo "***************************************"
+echo "**              PHASE 2              **"
+echo "***************************************"
+
+echo "[Installing] nvm"
+sh ./install/nvm.sh
+
+echo "[Installing] neovim"
+sh ./install/neovim.sh
+
 echo "[Configuring] Changing hostname to $1"
 sh ./configure/change-hostname.sh $1
 
